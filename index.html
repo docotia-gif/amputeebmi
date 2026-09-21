@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amputee BMI Calculator — Corrected BMI for Limb Loss</title>
+<meta name="description" content="A free corrected BMI calculator for amputees. Standard BMI reads artificially low after limb loss — this tool adjusts for missing limb mass so you get an accurate result.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <div class="brand">
+      <span class="name"><strong>Amputee</strong>BMI</span>
+    </div>
+    <nav class="primary">
+      <a href="index.html">Calculator</a>
+      <a href="#about">Why It Matters</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot top-banner" id="ad-top">Advertisement — top banner (728x90)</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Free clinical tool</span>
+    <h1>The corrected BMI calculator for amputees</h1>
+    <p class="lede">Standard BMI doesn't account for missing limb mass, so it reads artificially low after amputation. This tool applies validated body-segment correction to give you an accurate, weight-adjusted BMI.</p>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="wrap">
+    <div class="calc-card">
+      <form id="bmiForm">
+        <div class="unit-toggle" role="group" aria-label="Units">
+          <button type="button" class="active" data-units="metric">Metric (cm / kg)</button>
+          <button type="button" data-units="imperial">Imperial (in / lb)</button>
+        </div>
+
+        <div class="row-2">
+          <div class="field">
+            <label for="height">Height</label>
+            <input type="number" id="height" step="0.1" placeholder="175" required>
+            <span class="hint" id="heightUnit">centimeters</span>
+          </div>
+          <div class="field">
+            <label for="weight">Current weight</label>
+            <input type="number" id="weight" step="0.1" placeholder="70" required>
+            <span class="hint" id="weightUnit">kilograms</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="level">Amputation level</label>
+          <select id="level" required>
+            <option value="">Select level…</option>
+            <option value="AKA">Above-knee (transfemoral)</option>
+            <option value="BKA">Below-knee (transtibial)</option>
+            <option value="AE">Above-elbow (transhumeral)</option>
+            <option value="BE">Below-elbow (transradial)</option>
+            <option value="foot">Foot / partial foot</option>
+            <option value="hand">Hand / partial hand</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="side">Side affected</label>
+          <select id="side" required>
+            <option value="unilateral">Unilateral (one side)</option>
+            <option value="bilateral">Bilateral (both sides)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-calc">Calculate corrected BMI</button>
+      </form>
+
+      <div class="result-box" id="resultBox">
+        <div class="result-row">
+          <span class="label">Standard BMI (uncorrected)</span>
+          <span class="value" id="resStandard">—</span>
+        </div>
+        <div class="result-row">
+          <span class="label">Corrected BMI</span>
+          <span class="value corrected" id="resCorrected">—</span>
+        </div>
+        <div class="result-row">
+          <span class="label">Estimated full-body weight</span>
+          <span class="value" id="resFullWeight">—</span>
+        </div>
+        <span class="category-badge" id="resCategory">—</span>
+        <p class="explanation" id="resExplanation"></p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      This calculator is an educational and reference tool. It is not a diagnostic device and does not replace guidance from a physical therapist, occupational therapist, or physician. Corrected BMI is an estimate based on published body-segment weight tables and may not reflect individual body composition exactly.
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot mid-inline" id="ad-mid">Advertisement — mid-page inline (300x250)</div>
+
+<section class="info" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Why standard BMI is wrong for amputees</h2>
+      <p>The correction, explained</p>
+    </div>
+    <div class="info-body">
+      <p>Body Mass Index (BMI) is calculated from total body weight divided by height squared. It assumes an intact body — but after amputation, a meaningful percentage of total body mass is missing. A below-knee amputation removes roughly 4.4% of total body weight; an above-knee amputation removes about 9.9%. Bilateral amputations roughly double that figure.</p>
+      <p>Because that mass is gone, the weight measured on a scale is lower than it would be with the limb intact — which pulls standard BMI down, sometimes into a range that looks "underweight" or falsely "normal" when a person's actual body composition would place them elsewhere on the scale entirely.</p>
+      <p>This tool uses published body-segment weight tables (based on Winter/Dempster biomechanics research) to estimate what total body weight would be if the missing limb segment were still present, then recalculates BMI from that estimate. This gives clinicians and patients a more accurate reference point for weight-related conversations — nutrition, cardiovascular risk, prosthetic fitting, and rehabilitation planning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="info alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="info-body">
+      <p><strong>Is corrected BMI more accurate than standard BMI for everyone?</strong><br>No — it's specifically intended for people with limb loss. For non-amputees, standard BMI calculations are already accurate to the assumptions built into the formula.</p>
+      <p><strong>What amputation levels does this support?</strong><br>Above-knee (transfemoral), below-knee (transtibial), above-elbow (transhumeral), below-elbow (transradial), foot, and hand amputations, for unilateral or bilateral limb loss.</p>
+      <p><strong>Should I use this instead of talking to my care team?</strong><br>No. This tool is meant to support informed conversations with your physical therapist, occupational therapist, or physician — not replace their assessment.</p>
+      <p><strong>Where do the correction percentages come from?</strong><br>They're derived from published anthropometric body-segment weight research (Winter/Dempster segment tables), which estimate what percentage of total body mass different limb segments typically represent.</p>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot footer-ad" id="ad-footer">Advertisement — footer banner (728x90)</div>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 Docotia Enterprises LLC</span>
+    <span>
+      <a href="mailto:contact@docotia.com">contact@docotia.com</a>
+    </span>
+  </div>
+</footer>
+
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
