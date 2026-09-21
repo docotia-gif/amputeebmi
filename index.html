@@ -24,7 +24,7 @@
   </div>
 </header>
 
-<div class="ad-slot top-banner" id="ad-top">Advertisement — top banner (728x90)</div>
+<div class="ad-slot top-banner ad-hidden" id="ad-top">Advertisement — top banner (728x90)</div>
 
 <section class="hero">
   <div class="wrap">
@@ -39,20 +39,26 @@
     <div class="calc-card">
       <form id="bmiForm">
         <div class="unit-toggle" role="group" aria-label="Units">
-          <button type="button" class="active" data-units="metric">Metric (cm / kg)</button>
-          <button type="button" data-units="imperial">Imperial (in / lb)</button>
+          <button type="button" data-units="metric">cm / kg</button>
+          <button type="button" class="active" data-units="us">ft &amp; in / lb</button>
         </div>
 
         <div class="row-2">
-          <div class="field">
+          <div class="field" id="heightField">
             <label for="height">Height</label>
-            <input type="number" id="height" step="0.1" placeholder="175" required>
-            <span class="hint" id="heightUnit">centimeters</span>
+            <div class="height-us" id="heightUsRow">
+              <input type="number" id="heightFt" min="0" placeholder="5" required>
+              <span class="height-unit-label">ft</span>
+              <input type="number" id="heightIn" min="0" max="11" placeholder="9" required>
+              <span class="height-unit-label">in</span>
+            </div>
+            <input type="number" id="height" step="0.1" placeholder="175" style="display:none;">
+            <span class="hint" id="heightUnit">feet &amp; inches</span>
           </div>
           <div class="field">
             <label for="weight">Current weight</label>
-            <input type="number" id="weight" step="0.1" placeholder="70" required>
-            <span class="hint" id="weightUnit">kilograms</span>
+            <input type="number" id="weight" step="0.1" placeholder="154" required>
+            <span class="hint" id="weightUnit">pounds</span>
           </div>
         </div>
 
@@ -104,7 +110,7 @@
   </div>
 </section>
 
-<div class="ad-slot mid-inline" id="ad-mid">Advertisement — mid-page inline (300x250)</div>
+<div class="ad-slot mid-inline ad-hidden" id="ad-mid">Advertisement — mid-page inline (300x250)</div>
 
 <section class="info" id="about">
   <div class="wrap">
@@ -134,7 +140,7 @@
   </div>
 </section>
 
-<div class="ad-slot footer-ad" id="ad-footer">Advertisement — footer banner (728x90)</div>
+<div class="ad-slot footer-ad ad-hidden" id="ad-footer">Advertisement — footer banner (728x90)</div>
 
 <footer class="site">
   <div class="wrap">

@@ -85,6 +85,9 @@ nav.primary a{color:var(--ink-soft);}
 .ad-slot.top-banner{max-width:var(--max);margin:16px auto;min-height:90px;display:flex;align-items:center;justify-content:center;}
 .ad-slot.mid-inline{max-width:680px;margin:40px auto;min-height:250px;display:flex;align-items:center;justify-content:center;}
 .ad-slot.footer-ad{max-width:var(--max);margin:16px auto;min-height:90px;display:flex;align-items:center;justify-content:center;}
+/* Ad slots hidden until LLC/bank account setup is complete and AdSense is approved.
+   Remove this rule (or delete .ad-hidden from the markup) to re-enable. */
+.ad-slot.ad-hidden{display:none;}
 
 /* ---- Calculator ---- */
 .calc-section{padding:48px 0;}
@@ -101,6 +104,9 @@ nav.primary a{color:var(--ink-soft);}
   color:var(--ink-soft);margin-bottom:6px;
 }
 .field .hint{font-size:.78rem;color:var(--gray);margin-top:4px;}
+.height-us{display:flex;align-items:center;gap:8px;}
+.height-us input{flex:1;}
+.height-unit-label{font-size:.85rem;color:var(--ink-soft);white-space:nowrap;}
 .field input,.field select{
   width:100%;padding:10px 12px;
   border:1px solid var(--line);border-radius:6px;
