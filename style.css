@@ -72,22 +72,7 @@ nav.primary a{color:var(--ink-soft);}
   max-width:620px;margin:0 auto;
 }
 
-/* ---- Ad slots ---- */
-.ad-slot{
-  background:var(--paper-dim);
-  border:1px dashed var(--line);
-  color:var(--gray);
-  font-size:.78rem;
-  text-align:center;
-  padding:14px;
-  margin:0 auto;
-}
-.ad-slot.top-banner{max-width:var(--max);margin:16px auto;min-height:90px;display:flex;align-items:center;justify-content:center;}
-.ad-slot.mid-inline{max-width:680px;margin:40px auto;min-height:250px;display:flex;align-items:center;justify-content:center;}
-.ad-slot.footer-ad{max-width:var(--max);margin:16px auto;min-height:90px;display:flex;align-items:center;justify-content:center;}
-/* Ad slots hidden until LLC/bank account setup is complete and AdSense is approved.
-   Remove this rule (or delete .ad-hidden from the markup) to re-enable. */
-.ad-slot.ad-hidden{display:none;}
+/* ---- Ad slots removed: site now uses Google AdSense Auto ads (dashboard-managed placement) ---- */
 
 /* ---- Calculator ---- */
 .calc-section{padding:48px 0;}
