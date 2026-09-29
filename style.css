@@ -89,6 +89,16 @@ nav.primary a{color:var(--ink-soft);}
   color:var(--ink-soft);margin-bottom:6px;
 }
 .field .hint{font-size:.78rem;color:var(--gray);margin-top:4px;}
+.section-label{display:block;font-size:.85rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px;}
+.limb-field{margin-bottom:16px;}
+.limb-field label{display:block;font-size:.82rem;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
+.limb-field select{
+  width:100%;padding:10px 12px;
+  border:1px solid var(--line);border-radius:6px;
+  font-family:inherit;font-size:.95rem;
+  background:var(--paper);color:var(--ink);
+}
+.limb-field select:focus{outline:2px solid var(--teal-dim);outline-offset:1px;}
 .height-us{display:flex;align-items:center;gap:8px;}
 .height-us input{flex:1;}
 .height-unit-label{font-size:.85rem;color:var(--ink-soft);white-space:nowrap;}

@@ -45,7 +45,7 @@
 
         <div class="row-2">
           <div class="field" id="heightField">
-            <label for="height">Height</label>
+            <label for="height">Height (pre-amputation)</label>
             <div class="height-us" id="heightUsRow">
               <input type="number" id="heightFt" min="0" placeholder="5" required>
               <span class="height-unit-label">ft</span>
@@ -53,7 +53,7 @@
               <span class="height-unit-label">in</span>
             </div>
             <input type="number" id="height" step="0.1" placeholder="175" style="display:none;">
-            <span class="hint" id="heightUnit">feet &amp; inches</span>
+            <span class="hint" id="heightUnit">feet &amp; inches — your height before amputation, or your best estimate. This matters especially for bilateral amputees, since a post-amputation standing/measured height won't reflect true stature.</span>
           </div>
           <div class="field">
             <label for="weight">Current weight</label>
@@ -63,24 +63,49 @@
         </div>
 
         <div class="field">
-          <label for="level">Amputation level</label>
-          <select id="level" required>
-            <option value="">Select level…</option>
-            <option value="AKA">Above-knee (transfemoral)</option>
-            <option value="BKA">Below-knee (transtibial)</option>
-            <option value="AE">Above-elbow (transhumeral)</option>
-            <option value="BE">Below-elbow (transradial)</option>
-            <option value="foot">Foot / partial foot</option>
-            <option value="hand">Hand / partial hand</option>
-          </select>
-        </div>
+          <span class="section-label">Amputation level per limb</span>
+          <span class="hint" style="display:block;margin-bottom:12px;">Set each limb independently — leave as "None" if not amputated. Supports mixed levels (e.g. below-knee on one leg, above-knee on the other).</span>
 
-        <div class="field">
-          <label for="side">Side affected</label>
-          <select id="side" required>
-            <option value="unilateral">Unilateral (one side)</option>
-            <option value="bilateral">Bilateral (both sides)</option>
-          </select>
+          <div class="row-2">
+            <div class="limb-field">
+              <label for="legLeft">Left leg</label>
+              <select id="legLeft">
+                <option value="none">None</option>
+                <option value="AKA">Above-knee (transfemoral)</option>
+                <option value="BKA">Below-knee (transtibial)</option>
+                <option value="foot">Foot / partial foot</option>
+              </select>
+            </div>
+            <div class="limb-field">
+              <label for="legRight">Right leg</label>
+              <select id="legRight">
+                <option value="none">None</option>
+                <option value="AKA">Above-knee (transfemoral)</option>
+                <option value="BKA">Below-knee (transtibial)</option>
+                <option value="foot">Foot / partial foot</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-2">
+            <div class="limb-field">
+              <label for="armLeft">Left arm</label>
+              <select id="armLeft">
+                <option value="none">None</option>
+                <option value="AE">Above-elbow (transhumeral)</option>
+                <option value="BE">Below-elbow (transradial)</option>
+                <option value="hand">Hand / partial hand</option>
+              </select>
+            </div>
+            <div class="limb-field">
+              <label for="armRight">Right arm</label>
+              <select id="armRight">
+                <option value="none">None</option>
+                <option value="AE">Above-elbow (transhumeral)</option>
+                <option value="BE">Below-elbow (transradial)</option>
+                <option value="hand">Hand / partial hand</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <button type="submit" class="btn-calc">Calculate corrected BMI</button>
@@ -131,7 +156,7 @@
     </div>
     <div class="info-body">
       <p><strong>Is corrected BMI more accurate than standard BMI for everyone?</strong><br>No — it's specifically intended for people with limb loss. For non-amputees, standard BMI calculations are already accurate to the assumptions built into the formula.</p>
-      <p><strong>What amputation levels does this support?</strong><br>Above-knee (transfemoral), below-knee (transtibial), above-elbow (transhumeral), below-elbow (transradial), foot, and hand amputations, for unilateral or bilateral limb loss.</p>
+      <p><strong>What amputation levels does this support?</strong><br>Above-knee (transfemoral), below-knee (transtibial), above-elbow (transhumeral), below-elbow (transradial), foot, and hand amputations — set independently for each limb, so mixed presentations (e.g. a below-knee amputation on one leg and an above-knee amputation on the other, or bilateral arm loss) are fully supported.</p>
       <p><strong>Should I use this instead of talking to my care team?</strong><br>No. This tool is meant to support informed conversations with your physical therapist, occupational therapist, or physician — not replace their assessment.</p>
       <p><strong>Where do the correction percentages come from?</strong><br>They're derived from published anthropometric body-segment weight research (Winter/Dempster segment tables), which estimate what percentage of total body mass different limb segments typically represent.</p>
     </div>
