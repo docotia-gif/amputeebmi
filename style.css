@@ -50,6 +50,7 @@ header.site .bar{
 .brand .name strong{color:var(--teal);}
 nav.primary{display:flex;gap:22px;font-size:.9rem;}
 nav.primary a{color:var(--ink-soft);}
+nav.primary a.active{color:var(--teal);border-bottom:1px solid var(--teal);padding-bottom:2px;}
 
 /* ---- Hero ---- */
 .hero{
@@ -155,6 +156,50 @@ section.info.alt{background:var(--paper-dim);}
   border-left:3px solid var(--teal);background:var(--paper-dim);
   font-size:.85rem;color:var(--ink-soft);
 }
+
+/* ---- Related-pages grid (home) ---- */
+.ventures{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);
+}
+.venture{
+  background:var(--paper);padding:30px 26px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.venture h3{font-size:1.2rem;margin:0;}
+.venture p{font-size:.9rem;color:var(--ink-soft);margin:0;flex:1;}
+.venture a.go{font-size:.85rem;}
+@media (max-width:820px){
+  .ventures{grid-template-columns:1fr;}
+}
+
+/* ---- Citation list (research page) ---- */
+.citation-list{max-width:680px;margin:0 auto;padding:0;list-style:none;}
+.citation-list li{
+  margin:0 0 16px;padding:14px 18px;
+  background:var(--paper-dim);border-left:3px solid var(--teal-dim);
+  font-size:.9rem;color:var(--ink-soft);
+}
+.citation-list .cite-title{color:var(--ink);font-weight:600;}
+
+/* ---- Formula box (research page) ---- */
+.formula-box{
+  max-width:680px;margin:24px auto;padding:20px 24px;
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  font-family:'Source Serif 4',serif;font-size:1rem;color:var(--ink);
+  overflow-x:auto;
+}
+.formula-box code{font-family:'Source Serif 4',serif;}
+
+/* ---- Data table (research page) ---- */
+table.segment-table{
+  width:100%;max-width:680px;margin:20px auto;border-collapse:collapse;
+  font-size:.92rem;
+}
+table.segment-table th,table.segment-table td{
+  padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);
+}
+table.segment-table th{color:var(--ink-soft);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;}
 
 /* ---- Footer ---- */
 footer.site{

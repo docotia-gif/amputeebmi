@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research &amp; Method — Amputee BMI Calculator</title>
+<meta name="description" content="The body-segment weight tables and formula behind the amputee-corrected BMI calculator, with citations to the underlying biomechanics research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5520987806174466"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <div class="brand">
+      <span class="name"><strong>Amputee</strong>BMI</span>
+    </div>
+    <nav class="primary">
+      <a href="index.html">Calculator</a>
+      <a href="about.html">Why It Matters</a>
+      <a href="research.html" class="active">Research &amp; Method</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Methodology</span>
+    <h1>Research &amp; method</h1>
+    <p class="lede">The body-segment data and formula behind the correction, with citations.</p>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div class="info-body">
+      <p>Correcting BMI for limb loss requires an estimate of how much of total body mass a given limb segment represents. This calculator uses body-segment weight percentages drawn from classic biomechanics anthropometry research — most notably the work of David A. Winter and later refinements building on Dempster's original cadaver-based segment studies — which remain the standard reference tables used in prosthetics, rehabilitation, and biomechanics research for estimating segmental body mass.</p>
+
+      <h2 style="font-size:1.3rem;margin-top:8px;">Segment weight percentages used</h2>
+      <table class="segment-table">
+        <thead>
+          <tr><th>Amputation level</th><th>% of total body mass (single limb)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Above-knee (transfemoral)</td><td>9.9%</td></tr>
+          <tr><td>Below-knee (transtibial)</td><td>4.4%</td></tr>
+          <tr><td>Foot / partial foot</td><td>1.5%</td></tr>
+          <tr><td>Above-elbow (transhumeral)</td><td>3.35%</td></tr>
+          <tr><td>Below-elbow (transradial)</td><td>2.3%</td></tr>
+          <tr><td>Hand / partial hand</td><td>0.7%</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.85rem;color:var(--gray);">Mixed and bilateral amputations are handled by summing the applicable percentage for each affected limb independently (e.g. a below-knee amputation on one leg plus an above-knee amputation on the other sums to 4.4% + 9.9% = 14.3% of total body mass).</p>
+
+      <h2 style="font-size:1.3rem;margin-top:32px;">The correction formula</h2>
+      <div class="formula-box">
+        <p><code>missing_fraction = sum(segment_% for each affected limb) / 100</code></p>
+        <p><code>estimated_full_weight = current_weight / (1 − missing_fraction)</code></p>
+        <p><code>corrected_BMI = estimated_full_weight / (height_m)²</code></p>
+      </div>
+      <p>The logic: current measured weight reflects a body with the limb segment(s) missing. Dividing by <code>(1 − missing_fraction)</code> estimates what total body weight would be if that mass were restored. BMI is then recalculated using that estimated full-body weight against pre-amputation height, following the standard BMI formula.</p>
+
+      <h2 style="font-size:1.3rem;margin-top:32px;">Limitations</h2>
+      <p>Segment weight percentages are population averages derived from biomechanics research, not individualized measurements. Actual body composition varies by age, sex, body type, residual limb length within a given amputation level, and other factors not captured by a single percentage. Corrected BMI should be understood as a better estimate than uncorrected BMI — not an exact clinical measurement — and is intended to support, not replace, individualized clinical assessment.</p>
+
+      <h2 style="font-size:1.3rem;margin-top:32px;">References</h2>
+      <ul class="citation-list">
+        <li><span class="cite-title">Winter, D.A.</span> <em>Biomechanics and Motor Control of Human Movement.</em> John Wiley &amp; Sons. Body segment parameter tables widely cited and used in prosthetics, rehabilitation, and sports biomechanics research for estimating segmental mass, center of mass, and moment of inertia.</li>
+        <li><span class="cite-title">Dempster, W.T.</span> <em>Space Requirements of the Seated Operator.</em> WADC Technical Report 55-159, Wright-Patterson Air Force Base, 1955. Foundational cadaver-based anthropometric study establishing segmental mass distribution data later refined by Winter and others.</li>
+        <li><span class="cite-title">Osterkamp, L.K.</span> "Current Perspective on Assessment of Human Body Proportions of Relevance to Amputees." <em>Journal of the American Dietetic Association</em>, 1995. Discusses segment-weight correction approaches specifically applied to estimating body weight and BMI in amputees.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 Docotia Enterprises LLC</span>
+    <span>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:contact@amputeebmi.com">contact@amputeebmi.com</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
