@@ -5,95 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Clinicians — Amputee BMI Calculator</title>
 <meta name="description" content="Technical details on the BMI correction method, its validation, and appropriate use. Written for physicians, dietitians, prosthetists, and rehabilitation specialists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://amputeebmi.com/for-clinicians.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amputee BMI Calculator">
+<meta property="og:url" content="https://amputeebmi.com/for-clinicians.html">
+<meta property="og:title" content="For Clinicians — Amputee BMI Calculator">
+<meta property="og:description" content="Technical details on the BMI correction method, its validation, and appropriate use.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="For Clinicians — Amputee BMI Calculator">
+<meta name="twitter:description" content="Technical details on the BMI correction method, its validation, and appropriate use.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5520987806174466" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="primary">
-  <a href="index.html">Calculator</a>
-  <a href="about.html">Why It Matters</a>
-  <a href="research.html">Research &amp; Method</a>
-  <a href="faq.html">FAQ</a>
-  <a href="for-clinicians.html" class="active">For Clinicians</a>
-  <a href="blog/">Articles</a>
-  <a href="privacy.html">Privacy</a>
-</nav>
-<main class="content-page">
-<h1>For Clinicians</h1>
-<p class="lead">Technical details on the correction method, its validation, and appropriate use. Written for physicians, dietitians, prosthetists, and rehabilitation specialists.</p>
 
-<h2>Why Correct BMI at All?</h2>
-<p>Body mass index is used as a screening tool for weight-related health risk, a criterion for certain interventions (e.g., bariatric surgery eligibility, insurance coverage of medical nutrition therapy), and a metric in research. In people with limb loss, uncorrected BMI systematically underestimates adiposity because the denominator (height&sup2;) assumes an intact body while the numerator (weight) reflects only the remaining mass.</p>
-<p>Failure to correct can result in:</p>
-<ul>
-<li>Delayed referral for weight management in people who would qualify</li>
-<li>Inappropriate denial of services tied to BMI thresholds</li>
-<li>Underestimation of cardiovascular risk in a population already at elevated risk</li>
-</ul>
+<header class="site">
+  <div class="bar">
+    <div class="brand">
+      <span class="name"><strong>Amputee</strong>BMI</span>
+    </div>
+    <nav class="primary">
+      <a href="index.html">Calculator</a>
+      <a href="about.html">Why It Matters</a>
+      <a href="research.html">Research &amp; Method</a>
+      <a href="faq.html">FAQ</a>
+      <a href="for-clinicians.html" class="active">For Clinicians</a>
+      <a href="blog/">Articles</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
 
-<h2>The Correction Method</h2>
-<p>This calculator applies the Osterkamp (1995) correction, which uses body-segment weight percentages derived from cadaver-based anthropometric studies (Dempster, 1955; Winter, 1990). The formula is:</p>
-<pre>Corrected BMI = (Measured Weight / Height&sup2;) / (1 &minus; Missing Fraction)</pre>
-<p>Where <em>Missing Fraction</em> is the sum of segment percentages for all absent limb segments. For unilateral amputation, this is the single segment percentage. For bilateral or multi-limb amputation, the fractions are additive.</p>
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Clinical reference</span>
+    <h1>For clinicians</h1>
+    <p class="lede">Technical details on the correction method, its validation, and appropriate application.</p>
+  </div>
+</section>
 
-<h3>Segment Weight Percentages Used</h3>
-<table>
-<thead><tr><th>Amputation Level</th><th>Segment Terminology</th><th>% Total Body Mass (single)</th></tr></thead>
-<tbody>
-<tr><td>Hand</td><td>Partial hand / metacarpal</td><td>0.7%</td></tr>
-<tr><td>Below-elbow</td><td>Transradial</td><td>2.3%</td></tr>
-<tr><td>Above-elbow</td><td>Transhumeral</td><td>6.5%</td></tr>
-<tr><td>Foot</td><td>Partial foot / Syme's</td><td>1.5%</td></tr>
-<tr><td>Below-knee</td><td>Transtibial</td><td>5.9%</td></tr>
-<tr><td>Above-knee</td><td>Transfemoral</td><td>16.3%</td></tr>
-<tr><td>Hip disarticulation</td><td>&mdash;</td><td>18.5%</td></tr>
-</tbody>
-</table>
+<section class="info">
+  <div class="wrap">
+    <div class="info-body">
+      <p>Body mass index is used as a screening tool for weight-related health risk, a criterion for certain interventions (e.g., bariatric surgery eligibility, insurance coverage of medical nutrition therapy), and a metric in research. In people with limb loss, uncorrected BMI systematically underestimates adiposity because the denominator (height&sup2;) assumes an intact body while the numerator (weight) reflects only the remaining mass.</p>
 
-<h2>Comparison to Alternative Approaches</h2>
-<p>Several methods for estimating body composition after amputation exist:</p>
-<ul>
-<li><strong>Direct segment weighing (Dempster, 1955):</strong> Gold standard, requires specialized equipment. Not practical for routine use.</li>
-<li><strong>Bioelectrical impedance analysis (BIA):</strong> Increasingly used, but accuracy varies by device and amputation level. Not universally available.</li>
-<li><strong>Osterkamp correction:</strong> Uses published segment percentages. Simple, transparent, reproducible. Best suited for settings where only height and weight are known.</li>
-<li><strong>Gallagher et al. adjustment:</strong> A more recent method that incorporates both amputation level and body composition estimates. More complex but may be more accurate in people with obesity.</li>
-</ul>
-<p>The Osterkamp method is used here because it is the most transparent and widely cited in prosthetics literature, requires no specialized equipment, and is easily verified.</p>
+      <p>Failure to correct can result in:</p>
+      <ul>
+        <li>Delayed referral for weight management in people who would qualify</li>
+        <li>Inappropriate denial of services tied to BMI thresholds</li>
+        <li>Underestimation of cardiovascular risk in a population already at elevated risk</li>
+      </ul>
 
-<h2>Known Limitations</h2>
-<ul>
-<li><strong>Population averages:</strong> Segment percentages are based on cadaver studies of a limited sample. Individual variation in body composition can affect accuracy.</li>
-<li><strong>Obesity interaction:</strong> The Osterkamp method assumes a constant segment fraction. In people with obesity, the missing limb may have had a higher fat proportion than the population average, potentially overcorrecting.</li>
-<li><strong>Height assumption:</strong> The calculator uses pre-amputation height (or user estimate). Post-amputation height reduction is not accounted for.</li>
-<li><strong>Not validated in pediatric populations:</strong> Segment percentages are based on adult cadaver data. Use in children requires caution.</li>
-</ul>
+      <h2>The correction method</h2>
+      <p>This calculator applies the Osterkamp (1995) correction, which uses body-segment weight percentages derived from cadaver-based anthropometric studies (Dempster, 1955; Winter, 1990). The formula is:</p>
+      <div class="formula-box">
+        <p><code>Corrected BMI = (Measured Weight / Height&sup2;) / (1 &minus; Missing Fraction)</code></p>
+      </div>
+      <p>Where <em>Missing Fraction</em> is the sum of segment percentages for all absent limb segments. For unilateral amputation, this is the single segment percentage. For bilateral or multi-limb amputation, the fractions are additive.</p>
 
-<h2>When to Use This Tool</h2>
-<p>This calculator is appropriate as a <strong>screening aid</strong> when:</p>
-<ul>
-<li>You need a quick estimate of weight status in a person with limb loss</li>
-<li>You are discussing weight management goals and want a more accurate baseline than standard BMI</li>
-<li>You are documenting weight status for insurance or program eligibility where corrected BMI is requested</li>
-</ul>
-<p>It is <strong>not appropriate</strong> as a substitute for:</p>
-<ul>
-<li>DEXA or other body composition analysis when precise measurement is needed</li>
-<li>Professional judgment about individual health risk</li>
-<li>Diagnostic criteria that specifically require uncorrected BMI (e.g., some research protocols)</li>
-</ul>
+      <h2>Segment weight percentages used</h2>
+      <table class="segment-table">
+        <thead>
+          <tr><th>Amputation level</th><th>Segment terminology</th><th>% Total Body Mass (single)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hand</td><td>Partial hand / metacarpal</td><td>0.7%</td></tr>
+          <tr><td>Below-elbow</td><td>Transradial</td><td>2.3%</td></tr>
+          <tr><td>Above-elbow</td><td>Transhumeral</td><td>6.5%</td></tr>
+          <tr><td>Foot</td><td>Partial foot / Syme's</td><td>1.5%</td></tr>
+          <tr><td>Below-knee</td><td>Transtibial</td><td>5.9%</td></tr>
+          <tr><td>Above-knee</td><td>Transfemoral</td><td>16.3%</td></tr>
+          <tr><td>Hip disarticulation</td><td>&mdash;</td><td>18.5%</td></tr>
+        </tbody>
+      </table>
 
-<h2>References</h2>
-<ol>
-<li>Osterkamp LA. Current perspective on assessment of human body proportions of relevance to amputees. <em>J Am Diet Assoc.</em> 1995;95(2):215-218.</li>
-<li>Dempster WT. Space requirements of the seated operator. <em>WADC Technical Report.</em> 1955;55-159.</li>
-<li>Winter DA. <em>Biomechanics and Motor Control of Human Movement.</em> 2nd ed. Wiley; 1990.</li>
-<li>Gallagher M, et al. Body composition in persons with lower limb amputation. <em>Arch Phys Med Rehabil.</em> 1997;78(5):526-530.</li>
-</ol>
-<p>For questions about the methodology, please contact <a href="mailto:contact@amputeebmi.com">contact@amputeebmi.com</a>.</p>
-</main>
-<footer>
-<p>&copy; 2026 Docotia Enterprises LLC</p>
-<p><a href="privacy.html">Privacy Policy</a> &middot; <a href="mailto:contact@amputeebmi.com">Contact</a></p>
+      <h2>Comparison to alternative approaches</h2>
+      <ul>
+        <li><strong>Direct segment weighing (Dempster, 1955):</strong> Gold standard, requires specialized equipment. Not practical for routine use.</li>
+        <li><strong>Bioelectrical impedance analysis (BIA):</strong> Increasingly used, but accuracy varies by device and amputation level. Not universally available.</li>
+        <li><strong>Osterkamp correction:</strong> Uses published segment percentages. Simple, transparent, reproducible. Best suited for settings where only height and weight are known.</li>
+        <li><strong>Gallagher et al. adjustment:</strong> A more recent method that incorporates both amputation level and body composition estimates. More complex but may be more accurate in people with obesity.</li>
+      </ul>
+      <p>The Osterkamp method is used here because it is the most transparent and widely cited in prosthetics literature, requires no specialized equipment, and is easily verified.</p>
+
+      <h2>Known limitations</h2>
+      <ul>
+        <li><strong>Population averages:</strong> Segment percentages are based on cadaver studies of a limited sample. Individual variation in body composition can affect accuracy.</li>
+        <li><strong>Obesity interaction:</strong> The Osterkamp method assumes a constant segment fraction. In people with obesity, the missing limb may have had a higher fat proportion than the population average, potentially overcorrecting.</li>
+        <li><strong>Height assumption:</strong> The calculator uses pre-amputation height (or user estimate). Post-amputation height reduction is not accounted for.</li>
+        <li><strong>Not validated in pediatric populations:</strong> Segment percentages are based on adult cadaver data. Use in children requires caution.</li>
+      </ul>
+
+      <h2>When to use this tool</h2>
+      <p>This calculator is appropriate as a <strong>screening aid</strong> when:</p>
+      <ul>
+        <li>You need a quick estimate of weight status in a person with limb loss</li>
+        <li>You are discussing weight management goals and want a more accurate baseline than standard BMI</li>
+        <li>You are documenting weight status for insurance or program eligibility where corrected BMI is requested</li>
+      </ul>
+      <p>It is <strong>not appropriate</strong> as a substitute for:</p>
+      <ul>
+        <li>DEXA or other body composition analysis when precise measurement is needed</li>
+        <li>Professional judgment about individual health risk</li>
+        <li>Diagnostic criteria that specifically require uncorrected BMI (e.g., some research protocols)</li>
+      </ul>
+
+      <h2>References</h2>
+      <ul class="citation-list">
+        <li><span class="cite-title">Osterkamp LA.</span> Current perspective on assessment of human body proportions of relevance to amputees. <em>J Am Diet Assoc.</em> 1995;95(2):215-218.</li>
+        <li><span class="cite-title">Dempster WT.</span> Space requirements of the seated operator. <em>WADC Technical Report.</em> 1955;55-159.</li>
+        <li><span class="cite-title">Winter DA.</span> <em>Biomechanics and Motor Control of Human Movement.</em> 2nd ed. Wiley; 1990.</li>
+        <li><span class="cite-title">Gallagher M, et al.</span> Body composition in persons with lower limb amputation. <em>Arch Phys Med Rehabil.</em> 1997;78(5):526-530.</li>
+      </ul>
+
+      <p>For questions about the methodology, please contact <a href="mailto:contact@amputeebmi.com">contact@amputeebmi.com</a>.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span>&copy; 2026 Docotia Enterprises LLC</span>
+    <span>
+      <a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:contact@amputeebmi.com">contact@amputeebmi.com</a>
+    </span>
+  </div>
 </footer>
+
 </body>
 </html>
